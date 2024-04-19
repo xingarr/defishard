@@ -45,7 +45,7 @@ export default function HomePage() {
           </div>
         </div>
         <h3
-          className={`text-center text-[48px] font-bold animate-once animate-ease-in max-md:px-4 max-md:text-[24px]  ${isVisible1 ? "animate-jump-in" : "animate-jump-out"}`}
+          className={`text-center text-[48px] font-bold animate-once animate-ease-in max-md:px-4 max-md:text-[24px]  ${isVisible1 ? "animate-fade-up" : "animate-jump-out"}`}
           ref={ref1}
         >
           Your one stop{" "}

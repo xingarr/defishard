@@ -42,7 +42,7 @@ export default function MarketPlacePage() {
           modules={[Autoplay]}
         >
           <SwiperSlide>
-            <div className="rounded-md p-4 dark:bg-[#131315B2]  bg-[#F2F2F2]">
+            <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
                   src={"/assets/trending.png"}
@@ -55,7 +55,7 @@ export default function MarketPlacePage() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="rounded-md p-4 dark:bg-[#131315B2]  bg-[#F2F2F2]">
+            <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
                   src={"/assets/trending.png"}
@@ -68,7 +68,7 @@ export default function MarketPlacePage() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="rounded-md p-4 dark:bg-[#131315B2]  bg-[#F2F2F2]">
+            <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
                   src={"/assets/trending.png"}
@@ -81,7 +81,7 @@ export default function MarketPlacePage() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="rounded-md p-4 dark:bg-[#131315B2]  bg-[#F2F2F2]">
+            <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
                   src={"/assets/trending.png"}
@@ -94,7 +94,7 @@ export default function MarketPlacePage() {
             </div>
           </SwiperSlide>
           <SwiperSlide>
-            <div className="rounded-md p-4 dark:bg-[#131315B2]  bg-[#F2F2F2]">
+            <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
                   src={"/assets/trending.png"}
@@ -108,7 +108,7 @@ export default function MarketPlacePage() {
           </SwiperSlide>
         </Swiper>
         <div
-          className={`absolute left-0 top-1/2 z-10 h-0 w-full -translate-y-[32px] justify-between flex max-md:hidden`}
+          className={`absolute left-0 top-1/2 z-10 flex h-0 w-full -translate-y-[32px] justify-between max-md:hidden`}
         >
           <button
             onClick={handlePrev}
@@ -125,10 +125,10 @@ export default function MarketPlacePage() {
         </div>
       </div>
 
-      <div className="mt-[55px] flex w-full gap-10 max-md:flex-col-reverse">
+      <div className="mt-[55px] flex w-full gap-10 max-md:mt-[70px] max-md:flex-col-reverse">
         <div className="w-full">
           <p className="text-[24px] max-md:text-[14px]">Fine Digital Art</p>
-          <div className="mt-[20px] rounded-md px-6 py-4 dark:bg-[#131315B2] bg-[#F2F2F2]">
+          <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <AspectRatio ratio={16 / 7} className="">
               <Image
                 src={"/assets/trending.png"}
@@ -142,7 +142,7 @@ export default function MarketPlacePage() {
           <p className="mt-[24px] text-[24px] max-md:text-[14px]">
             Live Auctions
           </p>
-          <div className="mt-[20px] rounded-md px-6 py-4 dark:bg-[#131315B2] bg-[#F2F2F2]">
+          <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <AspectRatio ratio={16 / 16} className="">
               <Image
                 src={"/assets/trending.png"}
@@ -157,7 +157,7 @@ export default function MarketPlacePage() {
 
         <div className="w-full">
           <p className="text-[24px] max-md:text-[14px]">Collections 1/1</p>
-          <div className="mt-[20px] rounded-md px-6 py-4 dark:bg-[#131315B2] bg-[#F2F2F2]">
+          <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <div className="group relative">
               <AspectRatio ratio={16 / 16} className="">
                 <Image
@@ -198,7 +198,7 @@ export default function MarketPlacePage() {
           <p className="mt-[24px] text-[24px] max-md:text-[14px]">
             Photography
           </p>
-          <div className="mt-[20px] rounded-md px-6 py-4 dark:bg-[#131315B2] bg-[#F2F2F2]">
+          <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <AspectRatio ratio={16 / 7} className="">
               <Image
                 src={"/assets/trending.png"}
@@ -212,9 +212,9 @@ export default function MarketPlacePage() {
         </div>
       </div>
 
-      <div className="mt-[30px]">
+      <div className="mt-[30px] max-md:mt-[120px]">
         <p className="text-[24px] max-md:text-[14px]">Featured Artist</p>
-        <div className="mt-[20px] flex justify-between gap-[56px] rounded-md p-4 dark:bg-[#0A0A0D] bg-[#F2F2F2]">
+        <div className="mt-[20px] flex justify-between gap-[56px] rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
           <Swiper
             slidesPerView={isDesktop ? 6 : 2.2}
             spaceBetween={isDesktop ? 20 : 10}
@@ -285,15 +285,15 @@ export default function MarketPlacePage() {
         </div>
       </div>
 
-      <div className="mt-[30px]">
-        <h3 className="text-[24px] max-md:text-[14px]">AI Scopes</h3>
+      <div className="mt-[30px] max-md:mb-[80px] max-md:mt-[120px]">
+        <h3 className="text-[24px] max-md:text-[14px]">AI Scape</h3>
         <Swiper
           slidesPerView={isDesktop ? 4 : 2}
           spaceBetween={isDesktop ? 20 : 10}
-          autoplay={{delay: 4000}}
+          autoplay={{ delay: 4000 }}
           modules={[Autoplay]}
         >
-          <SwiperSlide className="rounded-md p-4 dark:bg-[#0A0A0D] bg-[#F2F2F2]">
+          <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
                 src={"/assets/trending.png"}
@@ -304,7 +304,7 @@ export default function MarketPlacePage() {
               />
             </AspectRatio>
           </SwiperSlide>
-          <SwiperSlide className="rounded-md p-4 dark:bg-[#0A0A0D] bg-[#F2F2F2]">
+          <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
                 src={"/assets/trending.png"}
@@ -315,7 +315,7 @@ export default function MarketPlacePage() {
               />
             </AspectRatio>
           </SwiperSlide>
-          <SwiperSlide className="rounded-md p-4 dark:bg-[#0A0A0D] bg-[#F2F2F2]">
+          <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
                 src={"/assets/trending.png"}
@@ -326,7 +326,7 @@ export default function MarketPlacePage() {
               />
             </AspectRatio>
           </SwiperSlide>
-          <SwiperSlide className="rounded-md p-4 dark:bg-[#0A0A0D] bg-[#F2F2F2]">
+          <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
                 src={"/assets/trending.png"}
