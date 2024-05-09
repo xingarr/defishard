@@ -44,6 +44,8 @@ const Button = React.forwardRef<HTMLButtonElement, ButtonProps>(
     const Comp = asChild ? "button" : "button";
     return (
       <Comp
+        data-twe-ripple-init
+        data-twe-ripple-color="light"
         className={cn(buttonVariants({ variant, size, className }))}
         ref={ref}
         {...props}

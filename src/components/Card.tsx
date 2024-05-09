@@ -11,7 +11,7 @@ export default function Card({
     <div className="flex justify-center items-center">
       <div
         className={
-          "w-full rounded-md shadow-md dark:bg-gradient-to-b dark:from-[#1F1F24] dark:to-[#09090E] bg-white " +
+          "" +
           className
         }
       >
