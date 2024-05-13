@@ -189,9 +189,9 @@ export default function MarketPlacePage() {
                     <p>4d 16h 32m 10s</p>
                   </div>
                 </div>
-                <Button className="h-0 w-full py-0 text-xl opacity-0 transition-all duration-300 ease-linear group-hover:h-10 group-hover:py-6 group-hover:opacity-100 max-md:text-lg group-hover:max-md:h-7 max-md:group-hover:py-5">
+                {/* <Button className="h-0 w-full py-0 text-xl opacity-0 transition-all duration-300 ease-linear group-hover:h-10 group-hover:py-6 group-hover:opacity-100 max-md:text-lg group-hover:max-md:h-7 max-md:group-hover:py-5">
                   Mint
-                </Button>
+                </Button> */}
               </div>
             </div>
           </div>

@@ -13,10 +13,8 @@ import { useIsVisible } from "@/hooks/useIsVisible";
 export default function HomePage() {
   const router = useRouter();
   const ref1 = useRef<any>();
-  const ref2 = useRef<any>();
   const ref3 = useRef<any>();
   const isVisible1 = useIsVisible(ref1);
-  const isVisible2 = useIsVisible(ref2);
   const isVisible3 = useIsVisible(ref3);
 
   return (
@@ -122,8 +120,8 @@ export default function HomePage() {
         </div>
         <div className="relative z-10 pt-20">
           <h4
-            className={`text-center text-5xl font-bold animate-once animate-ease-in max-md:text-[24px] ${isVisible2 ? "animate-fade-up" : ""}`}
-            ref={ref2}
+            className={`text-center text-5xl font-bold animate-once animate-ease-in max-md:text-[24px]`}
+            // ref={ref2}
           >
             For Creators & Collectors
           </h4>
@@ -154,7 +152,7 @@ export default function HomePage() {
         />
       </section>
 
-      <section className="relative z-10 pb-6 pt-10 md:pb-24 md:pt-56">
+      <section className="relative z-10 pb-6 pt-10 md:pb-24 md:pt-20">
         <div className="absolute left-0 top-0 -z-[1] h-full w-full">
           <Image
             src={"/assets/nft-back.png"}
@@ -172,7 +170,7 @@ export default function HomePage() {
           />
         </div>
         <h4
-          className={`relative z-10 mb-8 text-center text-5xl font-bold leading-normal animate-once animate-ease-in max-md:text-[24px] ${isVisible3 ? "animate-shake" : ""}`}
+          className={`relative z-10 mb-8 text-center text-5xl font-bold leading-normal animate-once animate-ease-in max-md:text-[24px] ${isVisible3 ? "animate-fade-up" : ""}`}
           ref={ref3}
         >
           Where{" "}
