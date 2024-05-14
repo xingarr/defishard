@@ -29,7 +29,7 @@ export default function HomePage() {
             className="h-screen w-full max-md:min-h-screen max-md:object-cover hidden dark:block"
           />
           <Image
-            src="/assets/wave.png"
+            src="/assets/wave-light.png"
             alt="hero"
             width={1600}
             height={900}
