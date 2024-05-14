@@ -26,7 +26,14 @@ export default function HomePage() {
             alt="hero"
             width={1600}
             height={900}
-            className="h-screen w-full max-md:min-h-screen max-md:object-cover"
+            className="h-screen w-full max-md:min-h-screen max-md:object-cover hidden dark:block"
+          />
+          <Image
+            src="/assets/wave.png"
+            alt="hero"
+            width={1600}
+            height={900}
+            className="h-screen w-full max-md:min-h-screen max-md:object-cover dark:hidden"
           />
           <div className="absolute top-0 mx-auto flex h-full w-full max-w-[1400px] justify-center gap-5 px-4">
             <div className="flex w-1/2 flex-col justify-center max-md:w-full max-md:gap-4">
