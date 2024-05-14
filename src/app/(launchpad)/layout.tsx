@@ -1,3 +1,4 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
 
 import React, { useEffect, useState } from "react";
@@ -5,9 +6,24 @@ import Image from "next/image";
 import Link from "next/link";
 import { usePathname } from "next/navigation";
 
+import { utils } from "near-api-js";
+import {
+  setupWalletSelector,
+  type NetworkId,
+} from "@near-wallet-selector/core";
+import { setupModal } from "@near-wallet-selector/modal-ui";
+import { setupMyNearWallet } from "@near-wallet-selector/my-near-wallet";
+import "@near-wallet-selector/modal-ui/styles.css";
+import { setupMeteorWallet } from "@near-wallet-selector/meteor-wallet";
+import { setupHereWallet } from "@near-wallet-selector/here-wallet";
+import { setupSender } from "@near-wallet-selector/sender";
+import { setupLedger } from "@near-wallet-selector/ledger";
+
 import {
   CheckIcon,
   ChevronDown,
+  ChevronRight,
+  LogOut,
   MenuIcon,
   Settings,
   ShoppingCartIcon,
@@ -33,6 +49,14 @@ import {
 
 import { getCookie } from "@/lib/cookie";
 import LoadingComponent from "@/components/Loading";
+import {
+  prettyTruncate,
+  viewMethod,
+  getBalance,
+  fetchNearUsdtPrice,
+} from "@/lib/utils";
+
+import UserContext from "@/lib/context";
 
 export default function Layout({ children }: { children: React.ReactNode }) {
   const pathname = usePathname();
@@ -42,6 +66,98 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   const [isOpen, setIsOpen] = useState(false);
 
   const [loading, setLoading] = useState(true);
+
+  const [walletSelector, setWalletSelector] = useState<any>({});
+  const [initWalletSelector, setInitWalletSelector] = useState(false);
+  const [accountId, setAccountId] = useState<any>(null);
+  const [accountBalance, setAccountBalance] = useState<any>(null);
+  const [walletSelectorObject, setWalletSelectorObject] = useState<any>({});
+  const [signInModal, setSignInModal] = useState<any>(null);
+  const [nftMetadata, setNftMetadata] = useState<any>({});
+  const [price, setPrice] = useState(0);
+
+  const _initWallet = async () => {
+    const selector = await setupWalletSelector({
+      network: process.env.NEXT_PUBLIC_APP_ENV! as NetworkId,
+      modules: [
+        setupMyNearWallet(),
+        setupMeteorWallet(),
+        setupHereWallet(),
+        // setupMintbaseWallet({
+        //   networkId: process.env.NEXT_PUBLIC_APP_ENV,
+        //   walletUrl: "https://wallet.mintbase.xyz",
+        //   callbackUrl: "https://www.mywebsite.com",
+        //   deprecated: false,
+        // }),
+        setupSender(),
+        setupLedger(),
+      ],
+    });
+    const modal = setupModal(selector, {
+      contractId: "test.testnet",
+    });
+
+    // const modal = setupModal(selector, {
+    //   contractId: process.env.NEXT_PUBLIC_NFT_CONTRACT_ID,
+    //   description: "Please connect your wallet",
+    // });
+
+    const isSignedIn = selector.isSignedIn();
+
+    let wallet;
+    let accountIdWallet;
+    let balance;
+
+    if (isSignedIn) {
+      wallet = await selector.wallet();
+
+      accountIdWallet = selector.store.getState().accounts[0]!.accountId;
+      balance = await getBalance(accountIdWallet);
+    }
+
+    // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+    const nftMetadata = await viewMethod(
+      process.env.NEXT_PUBLIC_NFT_CONTRACT_ID!,
+      "nft_metadata",
+    );
+
+    const price = await fetchNearUsdtPrice();
+
+    return {
+      selector,
+      wallet,
+      accountIdWallet,
+      modal,
+      nftMetadata,
+      balance,
+      price,
+    };
+  };
+
+  useEffect(() => {
+    if (!initWalletSelector) {
+      void _initWallet().then(
+        ({
+          selector,
+          wallet,
+          accountIdWallet,
+          modal,
+          nftMetadata,
+          balance,
+          price,
+        }) => {
+          setWalletSelector(selector);
+          setWalletSelectorObject(wallet);
+          setAccountId(accountIdWallet);
+          setSignInModal(modal);
+          setInitWalletSelector(true);
+          setNftMetadata(nftMetadata);
+          setAccountBalance(balance);
+          setPrice(Number(price));
+        },
+      );
+    }
+  }, [initWalletSelector, walletSelector]);
 
   useEffect(() => {
     const theme = getCookie("theme");
@@ -71,11 +187,24 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     setTheme(theme);
   };
 
+  if (!initWalletSelector) {
+    return <LoadingComponent />;
+  }
+
   return (
-    <>
+    <UserContext.Provider
+      value={{
+        walletSelector,
+        walletSelectorObject,
+        accountId,
+        signInModal,
+        nftMetadata,
+        accountBalance,
+      }}
+    >
       <nav
         className={
-          "fixed z-10 flex w-full items-center justify-between bg-background px-[72px] py-5 shadow-md max-md:px-2 dark:bg-[#09090E]"
+          "fixed z-50 flex w-full items-center justify-between bg-background px-[72px] py-5 shadow-md max-md:px-2 dark:bg-[#09090E]"
         }
       >
         <div className="flex items-center gap-4">
@@ -173,17 +302,75 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </div>
         <div className="flex items-center gap-2">
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button variant={"ghost"} size={"sm"}>
-                <span className="h-8 w-8 rounded-full bg-gradient-to-r from-[#8E4CE2] to-[#E19882]"></span>
-                <ChevronDown className="ml-1 w-5" />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuItem>Setting</DropdownMenuItem>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          {walletSelector.isSignedIn() && (
+            <DropdownMenu>
+              <DropdownMenuTrigger asChild>
+                <Button variant={"ghost"} size={"sm"}>
+                  <span className="h-8 w-8 rounded-full bg-gradient-to-r from-[#8E4CE2] to-[#E19882]"></span>
+                  <ChevronDown className="ml-1 w-5" />
+                </Button>
+              </DropdownMenuTrigger>
+              <DropdownMenuContent className="min-w-[250px]">
+                <div className="mt-2 flex items-center justify-center gap-4 text-sm">
+                  <span className="h-6 w-6 rounded-full bg-gradient-to-r from-[#8E4CE2] to-[#E19882]"></span>
+                  {prettyTruncate(accountId as string, 18, "address")}
+                </div>
+                <div className="my-6 flex flex-col items-center gap-1">
+                  <p className="text-xl font-bold">
+                    $
+                    {(
+                      Number(
+                        utils.format.formatNearAmount(
+                          accountBalance.available as string,
+                          2,
+                        ),
+                      ) * 7.27
+                    ).toFixed(2)}
+                  </p>
+                  <span className="text-sm text-[#BDBDBD]">
+                    {utils.format.formatNearAmount(
+                      accountBalance.available as string,
+                      2,
+                    )}{" "}
+                    Near
+                  </span>
+                </div>
+                <DropdownMenuItem className="flex justify-between">
+                  My Account <ChevronRight className="w-5" />
+                </DropdownMenuItem>
+                <DropdownMenuItem className="flex justify-between">
+                  My Assets <ChevronRight className="w-5" />
+                </DropdownMenuItem>
+
+                <Link href={"/create"} className="">
+                  <DropdownMenuItem className="flex w-full justify-between">
+                    Creators Mode <ChevronRight className="w-5" />
+                  </DropdownMenuItem>
+                </Link>
+
+                <DropdownMenuItem
+                  onClick={async () => {
+                    await walletSelectorObject.signOut();
+                    location.href = "";
+                  }}
+                  className="flex justify-between text-red-500"
+                >
+                  Logout
+                  <LogOut className="w-5" />
+                </DropdownMenuItem>
+              </DropdownMenuContent>
+            </DropdownMenu>
+          )}
+
+          {!walletSelector.isSignedIn() && (
+            <Button
+              onClick={() => {
+                signInModal.show();
+              }}
+            >
+              Connect Wallet
+            </Button>
+          )}
 
           {/* <Button>Connect Wallet</Button> */}
           <Button size={"icon"} variant={"ghost"}>
@@ -222,7 +409,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         </div>
       </nav>
       <main className="pt-20">
-        {loading && <LoadingComponent />}
+        {loading && !initWalletSelector && <LoadingComponent />}
         {children}
         <footer className="flex justify-center py-[85px] max-md:py-[40px]">
           <div className="flex justify-center gap-[36px] max-md:gap-[20px]">
@@ -233,6 +420,6 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </div>
         </footer>
       </main>
-    </>
+    </UserContext.Provider>
   );
 }
