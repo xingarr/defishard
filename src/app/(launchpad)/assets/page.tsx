@@ -1,10 +1,60 @@
+/* eslint-disable @typescript-eslint/no-unsafe-assignment */
+/* eslint-disable @typescript-eslint/no-unsafe-argument */
 "use client";
 
 import Image from "next/image";
-import React from "react";
+import React, {useEffect, useState} from "react";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
+import LoadingComponent from "@/components/Loading";
+import UserContext from "@/lib/context";
+import axios from "axios";
 
 export default function AssetsPage() {
+  const [totalCollections, setTotalCollections] = useState<any[]>([]);
+  const [myCollections, setMyCollections] = useState<any[]>([]);
+  const [collections, setCollections] = useState<any[]>([]);
+
+  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
+  const { accountId } = React.useContext(UserContext);
+
+  useEffect(() => {
+    void axios
+      .post(
+        "https://api.thegraph.com/subgraphs/name/icetrust0212/defishards-test",
+        {
+          query: `
+            query collection {
+              collections {
+                id
+                name
+                symbol
+                price
+                base_uri
+                currency
+                payment_split_percent
+                totalSupply
+                creator {id}
+              }
+            }
+          `,
+        },
+      )
+      .then((res) => {
+        const totalCollections = res.data.data.collections;
+        setTotalCollections(totalCollections);
+        const myCollections = totalCollections.filter((collection: any) => {
+          return collection.creator.id === accountId;
+        });
+        setMyCollections(myCollections);
+        setCollections(totalCollections);
+      });
+  }, [accountId]);
+
+  if (totalCollections.length === 0) {
+    return <LoadingComponent />;
+  }
+
+  
   return (
     <div className="container mx-auto my-16 max-sm:px-4">
       <h2 className="text-4xl">My Holdings</h2>
