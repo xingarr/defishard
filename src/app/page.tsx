@@ -155,7 +155,7 @@ export default function HomePage() {
           alt="creators"
           width={880}
           height={770}
-          className="w-full max-md:mt-[48px]"
+          className="w-full"
         />
       </section>
 
@@ -211,8 +211,8 @@ export default function HomePage() {
           Stay Liquid, Not Illiquid.
         </h3>
       </section> */}
-      <footer className="flex justify-center py-[85px] max-md:py-[40px]">
-        <div className="flex justify-center gap-[36px] max-md:gap-[20px]">
+      <footer className="flex justify-center py-[85px] max-md:py-[20px]">
+        <div className="flex justify-center gap-[36px] max-md:gap-[20px] max-md:text-sm">
           <span>Docs</span>
           <span>Twitter (X)</span>
           <span>Discord</span>
