@@ -338,9 +338,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
                 <DropdownMenuItem className="flex justify-between">
                   My Account <ChevronRight className="w-5" />
                 </DropdownMenuItem>
-                <DropdownMenuItem className="flex justify-between">
-                  My Assets <ChevronRight className="w-5" />
-                </DropdownMenuItem>
+                <Link href={"/assets"} className="">
+                  <DropdownMenuItem className="flex justify-between">
+                    My Assets <ChevronRight className="w-5" />
+                  </DropdownMenuItem>
+                </Link>
 
                 <Link href={"/create"} className="">
                   <DropdownMenuItem className="flex w-full justify-between">

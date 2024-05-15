@@ -71,7 +71,7 @@ export default function CreatePage() {
   return (
     <section className="my-20">
       <div className="container mx-auto px-4">
-        <div className="mx-auto mb-4 max-w-lg rounded bg-card px-8 pb-8 pt-6 shadow-md">
+        <div className="mx-auto mb-4 max-w-lg rounded bg-[#F2F2F2] dark:bg-[#131315B2] px-8 pb-8 pt-6 shadow-md">
           <h2 className="mb-6 text-center text-3xl font-bold text-gray-800 dark:text-white">
             Create Collection
           </h2>
