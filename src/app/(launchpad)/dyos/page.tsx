@@ -8,8 +8,8 @@ export default function DyosPage() {
         <h4 className="text-[122px] leading-none font-bold max-md:text-6xl">DYOS</h4>
         <p className="text-4xl max-md:text-2xl">Coming Soon</p>
       </div>
-      <Image src={"/assets/dyos-back.png"} alt="dyos" width={500} height={1000} className="w-full h-screen dark:hidden" />
-      <Image src={"/assets/dyos-dark-back.png"} alt="dyos" width={500} height={1000} className="w-full h-screen dark:block hidden" />
+      <Image src={"/assets/dyos-back.png"} alt="dyos" width={1300} height={1000} className="w-full h-screen dark:hidden" />
+      <Image src={"/assets/dyos-dark-back.png"} alt="dyos" width={1300} height={1000} className="w-full h-screen dark:block hidden" />
     </div>
   );
 }
