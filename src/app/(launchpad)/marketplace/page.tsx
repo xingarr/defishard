@@ -168,31 +168,6 @@ export default function MarketPlacePage() {
                   height={500}
                 />
               </AspectRatio>
-              <div className="absolute bottom-0 left-0 flex w-full flex-col justify-between gap-6 overflow-hidden bg-gradient-to-b from-transparent to-[#111010] px-5 pb-5 text-white max-md:px-[6px] max-md:pb-[6px] max-md:text-[12px]">
-                <div className="flex items-center justify-between">
-                  <p>Defishard 1</p>{" "}
-                  <span className="rounded-lg bg-[#131315B2] px-3 py-2">
-                    10 NEAR
-                  </span>
-                </div>
-                <div className="grid grid-cols-3">
-                  <div className="">
-                    <span>Payment Split %</span>
-                    <p>50%</p>
-                  </div>
-                  <div className="">
-                    <span>Total Supply</span>
-                    <p>10,000</p>
-                  </div>
-                  <div className="">
-                    <span>Date</span>
-                    <p>4d 16h 32m 10s</p>
-                  </div>
-                </div>
-                {/* <Button className="h-0 w-full py-0 text-xl opacity-0 transition-all duration-300 ease-linear group-hover:h-10 group-hover:py-6 group-hover:opacity-100 max-md:text-lg group-hover:max-md:h-7 max-md:group-hover:py-5">
-                  Mint
-                </Button> */}
-              </div>
             </div>
           </div>
           <p className="mt-[24px] text-[24px] max-md:text-[14px]">
@@ -342,3 +317,26 @@ export default function MarketPlacePage() {
     </div>
   );
 }
+
+
+{/* <div className="absolute bottom-0 left-0 flex w-full flex-col justify-between gap-6 overflow-hidden bg-gradient-to-b from-transparent to-[#111010] px-5 pb-5 text-white max-md:px-[6px] max-md:pb-[6px] max-md:text-[12px]">
+                <div className="flex items-center justify-between">
+                  <p>Defishard 1</p>{" "}
+                  <span className="rounded-lg bg-[#131315B2] px-3 py-2">
+                    10 NEAR
+                  </span>
+                </div>
+                <div className="grid grid-cols-3">
+                  <div className="">
+                    <span>Payment Split %</span>
+                    <p>50%</p>
+                  </div>
+                  <div className="">
+                    <span>Total Supply</span>
+                    <p>10,000</p>
+                  </div>
+                  <div className="">
+                    <span>Date</span>
+                    <p>4d 16h 32m 10s</p>
+                  </div>
+                </div> */}
