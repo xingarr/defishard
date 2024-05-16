@@ -1,3 +1,4 @@
+/* eslint-disable react/no-unescaped-entities */
 /* eslint-disable @typescript-eslint/no-unsafe-argument */
 /* eslint-disable @typescript-eslint/no-unsafe-assignment */
 "use client";
@@ -104,10 +105,10 @@ import React from "react";
 export default function LanuchpadPage() {
   return (
     <div className="container mx-auto mt-[42px] max-w-[1340px] max-md:px-4">
-      <div className="flex h-[calc(100vh-300px)] max-md:h-auto w-full items-center justify-center">
+      <div className="flex h-[calc(100vh-300px)] w-full items-center justify-center max-md:h-auto">
         <div className="flex w-full flex-col items-center justify-center gap-10">
           <div className="grid w-full grid-cols-2 gap-8 max-md:grid-cols-1">
-            <div className="rounded-lg bg-[#F2F2F2] px-8 py-6 dark:bg-[#131315B2]">
+            <div className="rounded-lg px-8 py-6 dark:bg-[#707077]">
               <AspectRatio ratio={16 / 13}>
                 <Image
                   src={"/assets/launchpad.png"}
@@ -118,10 +119,10 @@ export default function LanuchpadPage() {
                 />
               </AspectRatio>
             </div>
-            <div className="flex flex-col justify-between pb-8 dark:text-[#BDBDBD] max-md:gap-10">
-              <div className="mt-[10px] text-[24px] dark:text-white max-md:text-[16px]">
-                DeFishard1 (DEFI1){" "}
-                <div className="flex text-[14px] mt-3 max-md:text-[12px]">
+            <div className="flex flex-col justify-between pb-8 max-md:gap-10 dark:text-[#BDBDBD]">
+              <div className="mt-[10px] text-[24px] max-md:text-[16px] dark:text-white">
+                Underground Shard Society
+                {/* <div className="mt-3 flex text-[14px] max-md:text-[12px]">
                   <Image
                     src={"/assets/avatar.png"}
                     alt="avatar"
@@ -129,34 +130,51 @@ export default function LanuchpadPage() {
                     height={18}
                     className="mr-1 w-[18px] shrink-0"
                   />
-                  @miriamammi
-                </div>
+                </div> */}
               </div>
               <p className="text-[16px] max-md:text-[14px]">
-                We all just want to be celebrated; not only for the things we
-                do, but more importantly, for who we are and how we show up in
-                the world. Don’t forget to give out flowers while you can. To
-                others, and to yourself. c. Sean Wiliams, 2024
+                USS serves as a beacon of light in this new age digital world
+                order where communities are built on-chain resembling our real
+                life. But, there are some unanswered questions.
+              </p>
+              <p className="text-[16px] font-bold max-md:text-[14px]">
+                - What inspires us? <br />
+                - Why we do what we do? <br />
+                - Who we are? <br />- What keeps us going?
               </p>
               <p className="text-[16px] max-md:text-[14px]">
-                We all just want to be celebrated; not only for the things we
-                do, but more importantly, for who we are and how we show up in
-                the world.{" "}
+                There's only one way to unravel these secret mysteries.
+                <br />
+                Are you ready?
               </p>
-              <div className="grid grid-cols-3 max-md:text-[14px]">
-                <div>
-                  Payment Split %<p className="mt-4">50%</p>
-                </div>
-                <div>
-                  Total Supply<p className="mt-4">10,000</p>
-                </div>
-                <div>
-                  Date<p className="mt-4">4d 16h 32m 10s</p>
-                </div>
-              </div>
+              <p className="text-[16px] font-bold max-md:text-[14px]">
+                Mint info below ⬇️
+              </p>
               <div className="flex justify-between max-md:text-[14px]">
+                <div>
+                  Payment Split %
+                  <p className="relative mt-4 after:absolute after:left-0 after:top-0 after:block after:h-full after:w-[40px] after:bg-yellow-50 dark:after:bg-[#131315]">
+                    50%
+                  </p>
+                </div>
+                <div>
+                  Total Supply
+                  <p className="relative mt-4 after:absolute after:left-0 after:top-0 after:block after:h-full after:w-[50px] after:bg-yellow-50 dark:after:bg-[#131315]">
+                    10,000
+                  </p>
+                </div>
+                <div>
+                  Date
+                  <p className="relative mt-4 after:absolute after:left-0 after:top-0 after:block after:h-full after:w-[120px] after:bg-yellow-50 dark:after:bg-[#131315]">
+                    4d 16h 32m 10s
+                  </p>
+                </div>
+              </div>
+              <div className="flex items-center justify-between max-md:text-[14px]">
                 <span>Mint Fee</span>
-                <span className="font-bold dark:text-white">10 NEAR</span>
+                <span className="relative font-bold after:absolute after:left-0 after:top-0 after:block after:h-full after:w-[64px] dark:after:bg-[#131315] after:bg-yellow-50 text-white">
+                  10 NEAR
+                </span>
               </div>
             </div>
           </div>
