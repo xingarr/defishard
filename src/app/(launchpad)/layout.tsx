@@ -410,17 +410,17 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           </DropdownMenu>
         </div>
       </nav>
-      <main className="pt-20">
+      <main className="py-20">
         {loading && !initWalletSelector && <LoadingComponent />}
         {children}
-        <footer className="flex justify-center py-[85px] max-md:py-[40px]">
+        {/* <footer className="flex justify-center py-[85px] max-md:py-[40px]">
           <div className="flex justify-center gap-[36px] max-md:gap-[20px]">
             <span>Docs</span>
             <span>Twitter (X)</span>
             <span>Discord</span>
             <span>Telegram</span>
           </div>
-        </footer>
+        </footer> */}
       </main>
     </UserContext.Provider>
   );
