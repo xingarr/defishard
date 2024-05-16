@@ -194,9 +194,9 @@ export default function HomePage() {
             <Image
               src={"/assets/watch.png"}
               alt="watch"
-              className="w-full"
-              width={700}
-              height={700}
+              className="w-full rounded-lg"
+              width={900}
+              height={900}
             />
           </div>
           <div className="flex flex-col gap-8 text-2xl max-md:gap-2 max-md:text-center max-md:text-[14px]">
