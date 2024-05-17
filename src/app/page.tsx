@@ -141,7 +141,7 @@ export default function HomePage() {
           height={1400}
         />
         <Image
-          src={"/assets/light-card-panel-back.jpeg"}
+          src={"/assets/light-card-panel-back.png"}
           alt=""
           className="absolute left-0 top-0 h-full w-full object-cover dark:hidden"
           width={1400}
