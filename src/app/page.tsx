@@ -42,7 +42,7 @@ export default function HomePage() {
               </h1>
               <p className="text-[48px] max-md:text-[24px]">Stay Liquid, Not Illiquid.</p>
               <Button
-                className="flex w-[200px] px-8 py-6 text-xl max-md:px-6 max-md:py-4 max-md:text-[14px]"
+                className="flex w-[200px] px-8 py-6 text-xl"
                 onClick={() => {
                   router.push("/marketplace");
                 }}
