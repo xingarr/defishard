@@ -243,7 +243,7 @@ export default function MarketPlacePage() {
                 <Image
                   src={"/assets/trending.png"}
                   alt="trending"
-                  width={500}
+                  width={501}
                   height={500}
                   className="h-full w-full rounded-md object-cover"
                 />
