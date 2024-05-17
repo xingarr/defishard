@@ -37,7 +37,7 @@ export default function HomePage() {
           />
           <div className="absolute top-0 mx-auto flex h-full w-full max-w-[1400px] justify-center gap-5 px-4">
             <div className="flex w-1/2 flex-col justify-center max-md:w-full max-md:gap-4">
-              <h1 className="animate-fade-up text-[96px] font-bold uppercase italic leading-none animate-once animate-ease-in max-md:text-[40px]">
+              <h1 className="animate-fade-up text-[96px] font-bold uppercase italic leading-none animate-once animate-ease-in max-md:text-[45px]">
                 Defishards
               </h1>
               <p className="text-[48px] max-md:text-[24px]">Stay Liquid, Not Illiquid.</p>
