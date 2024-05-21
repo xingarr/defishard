@@ -196,7 +196,7 @@ export default function HomePage() {
           <div className="flex flex-col gap-8 text-2xl max-md:gap-2 max-md:text-center max-md:text-[14px]">
             <p>Enabling true asset ownership</p>
             <p>Promoting robust security</p>
-            <p>Enhancing creative freedom</p>
+            <p>Boosting creative freedom</p>
           </div>
         </div>
       </section>
