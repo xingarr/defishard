@@ -65,7 +65,7 @@ export default function HomePage() {
         </div>
       </section>
 
-      <section className="relative pb-20 pt-20 max-md:px-4">
+      <section className="relative pb-20 pt-20 max-md:px-4 max-sm:pb-10">
         <h3
           className={`relative z-10 mb-20 text-center text-[48px] font-bold animate-once animate-ease-in max-md:px-4 max-md:text-[24px]  ${isVisible1 ? "animate-fade-up" : "animate-jump-out"}`}
           ref={ref1}
