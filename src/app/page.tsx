@@ -20,13 +20,13 @@ export default function HomePage() {
   return (
     <main className="overflow-hidden dark:bg-[#09090E]">
       <section className="min-h-screen">
-        <div className="relative w-full flex justify-center">
+        <div className="relative flex w-full justify-center">
           <Image
             src="/assets/wave.png"
             alt="hero"
             width={1600}
             height={900}
-            className="h-screen w-full max-md:min-h-screen max-md:object-cover hidden dark:block"
+            className="hidden h-screen w-full max-md:min-h-screen max-md:object-cover dark:block"
           />
           <Image
             src="/assets/wave-light.png"
@@ -40,7 +40,9 @@ export default function HomePage() {
               <h1 className="animate-fade-up text-[96px] font-bold uppercase italic leading-none animate-once animate-ease-in max-md:text-[45px]">
                 Defishards
               </h1>
-              <p className="text-[48px] max-md:text-[24px]">Stay Liquid, Not Illiquid.</p>
+              <p className="text-[48px] max-md:text-[24px]">
+                Stay Liquid, Not Illiquid.
+              </p>
               <Button
                 className="flex w-[200px] px-8 py-6 text-xl"
                 onClick={() => {
@@ -50,8 +52,14 @@ export default function HomePage() {
                 Launch App
               </Button>
             </div>
-            <div className="w-1/2 flex items-center max-md:hidden">
-              <Image src={"/assets/hero-logo.png"} alt="hero logo" className="w-full " width={500} height={500} />
+            <div className="flex w-1/2 items-center max-md:hidden">
+              <Image
+                src={"/assets/hero-logo.png"}
+                alt="hero logo"
+                className="w-full "
+                width={500}
+                height={500}
+              />
             </div>
           </div>
         </div>
@@ -77,19 +85,12 @@ export default function HomePage() {
               <div className="w-[350px] rounded-md bg-white p-4 shadow-md dark:bg-gradient-to-b dark:from-[#1F1F24] dark:to-[#09090E]">
                 <div className="relative flex w-full items-center justify-center">
                   <Image
-                    src={"/assets/gold-store.webp"}
+                    src={"/assets/builder.webp"}
                     alt="builder"
                     width={400}
                     height={400}
-                    className="absolute left-0 top-0 h-full w-full object-cover"
+                    className="absolute left-0 top-0 h-full w-full rounded-md object-cover"
                   />
-                  {/* <Image
-                    src={"/assets/card-back.png"}
-                    alt="builder"
-                    width={400}
-                    height={400}
-                    className="absolute left-0 top-0 h-full w-full object-cover"
-                  /> */}
                   <span className="pt-[100%]"></span>
                 </div>
               </div>
@@ -102,25 +103,18 @@ export default function HomePage() {
               <div className="w-[350px] rounded-md bg-white p-4 shadow-md dark:bg-gradient-to-b dark:from-[#1F1F24] dark:to-[#09090E]">
                 <div className="relative flex w-full items-center justify-center">
                   <Image
-                    src={"/assets/builder.webp"}
-                    alt="builder"
-                    width={200}
-                    height={200}
-                    className="relative z-10"
-                  />
-                  <Image
-                    src={"/assets/card-back.png"}
+                    src={"/assets/gold-store.webp"}
                     alt="builder"
                     width={400}
                     height={400}
-                    className="absolute left-0 top-0 h-full w-full rounded-2xl object-cover"
+                    className="absolute left-0 top-0 h-full w-full rounded-md object-cover"
                   />
                   <span className="pt-[100%]"></span>
                 </div>
               </div>
 
               <p className="mt-4 text-center">
-                Experience the new meta-standard of NFTs on Near
+                Enhance the value of your collectibles as time passes.
               </p>
             </Card>
           </div>
