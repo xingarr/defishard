@@ -204,7 +204,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     >
       <nav
         className={
-          "fixed z-50 flex w-full items-center justify-between bg-background px-[72px] py-5 shadow-md max-md:px-2 dark:bg-[#09090E]"
+          "fixed z-50 flex w-full items-center justify-between bg-background px-[72px] top-0 py-5 shadow-md max-md:px-2 dark:bg-[#09090E]"
         }
       >
         <div className="flex items-center gap-4">

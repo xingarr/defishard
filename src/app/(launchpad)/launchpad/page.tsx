@@ -105,7 +105,7 @@ import React from "react";
 export default function LanuchpadPage() {
   return (
     <div className="container mx-auto mt-[42px] max-w-[1340px] max-md:px-4">
-      <div className="flex h-[calc(100vh-300px)] w-full items-center justify-center max-md:h-auto">
+      <div className="flex w-full items-center justify-center">
         <div className="flex w-full flex-col items-center justify-center gap-10">
           <div className="grid w-full grid-cols-2 gap-8 max-md:grid-cols-1">
             <div className="rounded-lg px-8 py-6 dark:bg-[#707077]">
