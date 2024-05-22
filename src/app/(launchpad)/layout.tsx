@@ -25,8 +25,10 @@ import {
   ChevronRight,
   LogOut,
   MenuIcon,
+  Moon,
   Settings,
   ShoppingCartIcon,
+  Sun,
 } from "lucide-react";
 
 import {
@@ -204,7 +206,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     >
       <nav
         className={
-          "fixed z-50 flex w-full items-center justify-between bg-background px-[72px] top-0 py-5 shadow-md max-md:px-2 dark:bg-[#09090E]"
+          "fixed top-0 z-50 flex w-full items-center justify-between bg-background px-[72px] py-5 shadow-md max-md:px-2 dark:bg-[#09090E]"
         }
       >
         <div className="flex items-center gap-4">
@@ -378,42 +380,25 @@ export default function Layout({ children }: { children: React.ReactNode }) {
           <Button size={"icon"} variant={"ghost"}>
             <ShoppingCartIcon />
           </Button>
-          <DropdownMenu>
-            <DropdownMenuTrigger asChild>
-              <Button size={"icon"} variant={"ghost"}>
-                <Settings />
-              </Button>
-            </DropdownMenuTrigger>
-            <DropdownMenuContent>
-              <DropdownMenuGroup>
-                <DropdownMenuLabel>Theme</DropdownMenuLabel>
-                <DropdownMenuItem
-                  className={theme === "light" ? "pl-7" : ""}
-                  onClick={() => {
-                    toogleTheme("dark");
-                  }}
-                >
-                  {theme === "dark" && <CheckIcon className="mr-1 w-4" />}
-                  Dark
-                </DropdownMenuItem>
-                <DropdownMenuItem
-                  className={theme === "dark" ? "pl-7" : ""}
-                  onClick={() => {
-                    toogleTheme("light");
-                  }}
-                >
-                  {theme === "light" && <CheckIcon className="mr-1 w-4" />}
-                  Light
-                </DropdownMenuItem>
-              </DropdownMenuGroup>
-            </DropdownMenuContent>
-          </DropdownMenu>
+          <Button
+            size={"icon"}
+            variant={"ghost"}
+            onClick={() => {
+              if (theme === "dark") {
+                toogleTheme("light");
+              } else {
+                toogleTheme("dark");
+              }
+            }}
+          >
+            {theme === "dark" ? <Sun /> : <Moon />}
+          </Button>
         </div>
       </nav>
       <main className="pt-20">
         {loading && !initWalletSelector && <LoadingComponent />}
         {children}
-        <footer className="flex justify-center py-[30px] mt-24">
+        <footer className="mt-24 flex justify-center py-[30px]">
           <div className="flex justify-center gap-[36px] max-md:gap-[20px]">
             <span>Docs</span>
             <span>Twitter (X)</span>
