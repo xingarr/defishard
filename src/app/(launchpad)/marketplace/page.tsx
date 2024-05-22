@@ -45,7 +45,7 @@ export default function MarketPlacePage() {
             <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/head-1.jpeg"}
                   alt="trending"
                   width={500}
                   height={500}
@@ -58,7 +58,7 @@ export default function MarketPlacePage() {
             <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/head-2.png"}
                   alt="trending"
                   width={500}
                   height={50}
@@ -71,7 +71,7 @@ export default function MarketPlacePage() {
             <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/head-3.png"}
                   alt="trending"
                   width={500}
                   height={50}
@@ -84,7 +84,7 @@ export default function MarketPlacePage() {
             <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/head-1.jpeg"}
                   alt="trending"
                   width={500}
                   height={50}
@@ -97,7 +97,7 @@ export default function MarketPlacePage() {
             <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/head-2.png"}
                   alt="trending"
                   width={500}
                   height={50}
@@ -131,9 +131,9 @@ export default function MarketPlacePage() {
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <AspectRatio ratio={16 / 7} className="">
               <Image
-                src={"/assets/trending.png"}
+                src={"/assets/market/fine-d.jpeg"}
                 alt="fine art"
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-cover blur-sm"
                 width={500}
                 height={500}
               />
@@ -147,7 +147,7 @@ export default function MarketPlacePage() {
               <Image
                 src={"/assets/trending.png"}
                 alt="fine art"
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-cover blur-sm"
                 width={500}
                 height={500}
               />
@@ -161,9 +161,9 @@ export default function MarketPlacePage() {
             <div className="group relative">
               <AspectRatio ratio={16 / 16} className="">
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/collection.png"}
                   alt="fine art"
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-sm"
                   width={500}
                   height={500}
                 />
@@ -176,9 +176,9 @@ export default function MarketPlacePage() {
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <AspectRatio ratio={16 / 7} className="">
               <Image
-                src={"/assets/trending.png"}
+                src={"/assets/market/photos.jpeg"}
                 alt="fine art"
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-cover blur-sm"
                 width={500}
                 height={500}
               />
@@ -197,55 +197,55 @@ export default function MarketPlacePage() {
             <SwiperSlide>
               <AspectRatio ratio={16 / 16}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/feat-1.png"}
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-sm"
                 />
               </AspectRatio>
             </SwiperSlide>
             <SwiperSlide>
               <AspectRatio ratio={16 / 16}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/feat-2.png"}
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-sm"
                 />
               </AspectRatio>
             </SwiperSlide>
             <SwiperSlide>
               <AspectRatio ratio={16 / 16}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/feat-3.png"}
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-sm"
                 />
               </AspectRatio>
             </SwiperSlide>
             <SwiperSlide>
               <AspectRatio ratio={16 / 16}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/feat-4.png"}
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-sm"
                 />
               </AspectRatio>
             </SwiperSlide>
             <SwiperSlide>
               <AspectRatio ratio={16 / 16}>
                 <Image
-                  src={"/assets/trending.png"}
+                  src={"/assets/market/feat-5.png"}
                   alt="trending"
                   width={501}
                   height={500}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-sm"
                 />
               </AspectRatio>
             </SwiperSlide>
@@ -271,44 +271,44 @@ export default function MarketPlacePage() {
           <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
-                src={"/assets/trending.png"}
+                src={"/assets/market/ai-1.png"}
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-cover blur-sm"
               />
             </AspectRatio>
           </SwiperSlide>
           <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
-                src={"/assets/trending.png"}
+                src={"/assets/market/ai-2.png"}
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-cover blur-sm"
               />
             </AspectRatio>
           </SwiperSlide>
           <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
-                src={"/assets/trending.png"}
+                src={"/assets/market/ai-3.png"}
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-cover blur-sm"
               />
             </AspectRatio>
           </SwiperSlide>
           <SwiperSlide className="rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
             <AspectRatio ratio={16 / 16}>
               <Image
-                src={"/assets/trending.png"}
+                src={"/assets/market/ai-4.png"}
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover"
+                className="h-full w-full rounded-md object-cover blur-sm"
               />
             </AspectRatio>
           </SwiperSlide>

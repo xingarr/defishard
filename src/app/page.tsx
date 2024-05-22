@@ -9,6 +9,7 @@ import Button from "@/components/Button";
 import Card from "@/components/Card";
 import { useRef } from "react";
 import { useIsVisible } from "@/hooks/useIsVisible";
+import { ArrowDownFromLine, ChevronsDown } from "lucide-react";
 
 export default function HomePage() {
   const router = useRouter();
@@ -35,6 +36,9 @@ export default function HomePage() {
             height={900}
             className="h-screen w-full max-md:min-h-screen max-md:object-cover dark:hidden"
           />
+          <div className="scale-125 shadow-teal-600 shadow-lg absolute bottom-14 left-1/2 -translate-x-1/2 animate-pulse rounded-3xl border border-black py-4 text-black dark:border-white dark:text-white">
+            <ChevronsDown className="w-10" />
+          </div>
           <div className="absolute top-0 mx-auto flex h-full w-full max-w-[1400px] justify-center gap-5 px-4">
             <div className="flex w-1/2 flex-col justify-center max-md:w-full max-md:gap-4">
               <h1 className="animate-fade-up text-[96px] font-bold uppercase italic leading-none animate-once animate-ease-in max-md:text-[45px]">
