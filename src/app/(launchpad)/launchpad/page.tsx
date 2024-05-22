@@ -104,9 +104,9 @@ import React from "react";
 
 export default function LanuchpadPage() {
   return (
-    <div className="container mx-auto mt-[42px] max-w-[1340px] max-md:px-4">
+    <div className="container mx-auto mt-[22px] max-w-[1340px] max-md:px-4">
       <div className="flex w-full items-center justify-center">
-        <div className="flex w-full flex-col items-center justify-center gap-10">
+        <div className="flex w-full flex-col items-center justify-center gap-4">
           <div className="grid w-full grid-cols-2 gap-8 max-md:grid-cols-1">
             <div className="rounded-lg px-8 py-6 dark:bg-[#707077]">
               <AspectRatio ratio={16 / 13}>
