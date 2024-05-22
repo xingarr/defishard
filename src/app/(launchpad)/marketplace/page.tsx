@@ -27,8 +27,8 @@ export default function MarketPlacePage() {
   }, []);
 
   return (
-    <div className="container mx-auto max-w-[1340px] pt-9 max-xl:px-4">
-      <h2 className="text-5xl max-md:text-[24px]">Trending</h2>
+    <div className="container mx-auto max-w-[1340px] pt-20 max-sm:pt-9 max-xl:px-4">
+      <h2 className="text-5xl max-md:text-[24px] font-bold">Trending</h2>
 
       <div className="relative mt-20 select-none bg-[#f1eeee] px-8 max-md:mt-[14px] dark:bg-[#09090E]">
         <Swiper
@@ -49,7 +49,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </div>
@@ -62,7 +62,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={50}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </div>
@@ -75,7 +75,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={50}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </div>
@@ -88,7 +88,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={50}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </div>
@@ -101,7 +101,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={50}
-                  className="h-full w-full rounded-md object-cover"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </div>
@@ -127,19 +127,19 @@ export default function MarketPlacePage() {
 
       <div className="mt-[55px] flex w-full gap-10 max-md:mt-[70px] max-md:flex-col-reverse">
         <div className="w-full">
-          <p className="text-[24px] max-md:text-[14px]">Fine Digital Art</p>
+          <p className="text-[24px] max-md:text-[14px] font-bold">Fine Digital Art</p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <AspectRatio ratio={16 / 7} className="">
               <Image
                 src={"/assets/market/fine-d.jpeg"}
                 alt="fine art"
-                className="h-full w-full rounded-md object-cover blur-sm"
+                className="h-full w-full rounded-md object-cover blur-md"
                 width={500}
                 height={500}
               />
             </AspectRatio>
           </div>
-          <p className="mt-[24px] text-[24px] max-md:text-[14px]">
+          <p className="mt-[24px] text-[24px] max-md:text-[14px] font-bold">
             Live Auctions
           </p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
@@ -147,7 +147,7 @@ export default function MarketPlacePage() {
               <Image
                 src={"/assets/trending.png"}
                 alt="fine art"
-                className="h-full w-full rounded-md object-cover blur-sm"
+                className="h-full w-full rounded-md object-cover blur-md"
                 width={500}
                 height={500}
               />
@@ -156,21 +156,21 @@ export default function MarketPlacePage() {
         </div>
 
         <div className="w-full">
-          <p className="text-[24px] max-md:text-[14px]">Collections 1/1</p>
+          <p className="text-[24px] max-md:text-[14px] font-bold">Collections 1/1</p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <div className="group relative">
               <AspectRatio ratio={16 / 16} className="">
                 <Image
                   src={"/assets/market/collection.png"}
                   alt="fine art"
-                  className="h-full w-full rounded-md object-cover blur-sm"
+                  className="h-full w-full rounded-md object-cover blur-md"
                   width={500}
                   height={500}
                 />
               </AspectRatio>
             </div>
           </div>
-          <p className="mt-[24px] text-[24px] max-md:text-[14px]">
+          <p className="mt-[24px] text-[24px] max-md:text-[14px] font-bold">
             Photography
           </p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
@@ -178,7 +178,7 @@ export default function MarketPlacePage() {
               <Image
                 src={"/assets/market/photos.jpeg"}
                 alt="fine art"
-                className="h-full w-full rounded-md object-cover blur-sm"
+                className="h-full w-full rounded-md object-cover blur-md"
                 width={500}
                 height={500}
               />
@@ -188,7 +188,7 @@ export default function MarketPlacePage() {
       </div>
 
       <div className="mt-[30px] max-md:mt-[120px]">
-        <p className="text-[24px] max-md:text-[14px]">Featured Artist</p>
+        <p className="text-[24px] max-md:text-[14px] font-bold">Featured Artist</p>
         <div className="mt-[20px] flex justify-between gap-[56px] rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
           <Swiper
             slidesPerView={isDesktop ? 6 : 2.2}
@@ -201,7 +201,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover blur-sm"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </SwiperSlide>
@@ -212,7 +212,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover blur-sm"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </SwiperSlide>
@@ -223,7 +223,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover blur-sm"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </SwiperSlide>
@@ -234,7 +234,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={500}
                   height={500}
-                  className="h-full w-full rounded-md object-cover blur-sm"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </SwiperSlide>
@@ -245,7 +245,7 @@ export default function MarketPlacePage() {
                   alt="trending"
                   width={501}
                   height={500}
-                  className="h-full w-full rounded-md object-cover blur-sm"
+                  className="h-full w-full rounded-md object-cover blur-md"
                 />
               </AspectRatio>
             </SwiperSlide>
@@ -261,7 +261,7 @@ export default function MarketPlacePage() {
       </div>
 
       <div className="mt-[30px] max-md:mb-[80px] max-md:mt-[120px]">
-        <h3 className="text-[24px] max-md:text-[14px]">AI Scape</h3>
+        <h3 className="text-[24px] max-md:text-[14px] font-bold">AI Scape</h3>
         <Swiper
           slidesPerView={isDesktop ? 4 : 2}
           spaceBetween={isDesktop ? 20 : 10}
@@ -275,7 +275,7 @@ export default function MarketPlacePage() {
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover blur-sm"
+                className="h-full w-full rounded-md object-cover blur-md"
               />
             </AspectRatio>
           </SwiperSlide>
@@ -286,7 +286,7 @@ export default function MarketPlacePage() {
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover blur-sm"
+                className="h-full w-full rounded-md object-cover blur-md"
               />
             </AspectRatio>
           </SwiperSlide>
@@ -297,7 +297,7 @@ export default function MarketPlacePage() {
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover blur-sm"
+                className="h-full w-full rounded-md object-cover blur-md"
               />
             </AspectRatio>
           </SwiperSlide>
@@ -308,7 +308,7 @@ export default function MarketPlacePage() {
                 alt="trending"
                 width={500}
                 height={500}
-                className="h-full w-full rounded-md object-cover blur-sm"
+                className="h-full w-full rounded-md object-cover blur-md"
               />
             </AspectRatio>
           </SwiperSlide>
