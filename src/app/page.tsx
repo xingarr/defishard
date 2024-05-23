@@ -36,7 +36,7 @@ export default function HomePage() {
             height={900}
             className="h-screen w-full max-md:min-h-screen max-md:object-cover dark:hidden"
           />
-          <div className="scale-125 shadow-teal-600 shadow-lg absolute bottom-14 left-1/2 -translate-x-1/2 animate-pulse rounded-3xl border border-black py-4 text-black dark:border-white dark:text-white">
+          <div className="absolute bottom-14 left-1/2 -translate-x-1/2 scale-125 animate-pulse rounded-3xl border border-black py-4 text-black shadow-lg shadow-teal-600 dark:border-white dark:text-white">
             <ChevronsDown className="w-10" />
           </div>
           <div className="absolute top-0 mx-auto flex h-full w-full max-w-[1400px] justify-center gap-5 px-4">
@@ -204,17 +204,19 @@ export default function HomePage() {
           </div>
         </div>
       </section>
-      {/* <section className="mt-[180px] max-md:mt-[98px]">
-        <h3 className="text-center text-8xl max-md:text-[24px]">
-          Stay Liquid, Not Illiquid.
-        </h3>
-      </section> */}
       <footer className="flex justify-center py-[85px] max-md:py-[20px]">
         <div className="flex justify-center gap-[36px] max-md:gap-[20px] max-md:text-sm">
           <span>Docs</span>
-          <span>Twitter (X)</span>
+          <a
+            href="https://x.com/defishardsxyz?s=11&t=p0b7ivp_onsJbfa8lLsVpw"
+            target="_blank"
+          >
+            Twitter (X)
+          </a>
           <span>Discord</span>
-          <span>Telegram</span>
+          <a href="https://t.me/HouseofShards" target="_blank">
+            Telegram
+          </a>
         </div>
       </footer>
     </main>

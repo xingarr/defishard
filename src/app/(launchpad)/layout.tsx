@@ -401,9 +401,16 @@ export default function Layout({ children }: { children: React.ReactNode }) {
         <footer className="mt-24 flex justify-center py-[30px]">
           <div className="flex justify-center gap-[36px] max-md:gap-[20px]">
             <span>Docs</span>
-            <span>Twitter (X)</span>
+            <a
+              href="https://x.com/defishardsxyz?s=11&t=p0b7ivp_onsJbfa8lLsVpw"
+              target="_blank"
+            >
+              Twitter (X)
+            </a>
             <span>Discord</span>
-            <span>Telegram</span>
+            <a href="https://t.me/HouseofShards" target="_blank">
+              Telegram
+            </a>
           </div>
         </footer>
       </main>
