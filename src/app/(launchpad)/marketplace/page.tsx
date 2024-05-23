@@ -27,8 +27,8 @@ export default function MarketPlacePage() {
   }, []);
 
   return (
-    <div className="container mx-auto max-w-[1340px] pt-20 max-sm:pt-9 max-xl:px-4">
-      <h2 className="text-5xl max-md:text-[24px] font-bold">Trending</h2>
+    <div className="container mx-auto max-w-[1340px] pt-20 max-xl:px-4 max-sm:pt-9">
+      <h2 className="text-5xl font-bold max-md:text-[24px]">Trending</h2>
 
       <div className="relative mt-20 select-none bg-[#f1eeee] px-8 max-md:mt-[14px] dark:bg-[#09090E]">
         <Swiper
@@ -108,17 +108,17 @@ export default function MarketPlacePage() {
           </SwiperSlide>
         </Swiper>
         <div
-          className={`absolute left-0 top-1/2 z-10 flex h-0 w-full -translate-y-[32px] justify-between max-md:hidden`}
+          className={`absolute left-0 top-1/2 z-10 flex h-0 w-full -translate-y-[32px] justify-between`}
         >
           <button
             onClick={handlePrev}
-            className="- flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#8E4CE2] to-[#E19882]"
+            className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#8E4CE2] to-[#E19882] max-sm:h-12 max-sm:w-12 "
           >
             <ChevronLeft className="w-6" />
           </button>
           <button
             onClick={handleNext}
-            className=" flex h-16 w-16  items-center justify-center rounded-full bg-gradient-to-r from-[#8E4CE2] to-[#E19882]"
+            className="flex h-16 w-16  items-center justify-center rounded-full bg-gradient-to-r from-[#8E4CE2] to-[#E19882]  max-sm:h-12 max-sm:w-12"
           >
             <ChevronRight className="w-6" />
           </button>
@@ -127,7 +127,9 @@ export default function MarketPlacePage() {
 
       <div className="mt-[55px] flex w-full gap-10 max-md:mt-[70px] max-md:flex-col-reverse">
         <div className="w-full">
-          <p className="text-[24px] max-md:text-[14px] font-bold">Fine Digital Art</p>
+          <p className="text-[24px] font-bold max-md:text-[14px]">
+            Fine Digital Arts
+          </p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <AspectRatio ratio={16 / 7} className="">
               <Image
@@ -139,7 +141,7 @@ export default function MarketPlacePage() {
               />
             </AspectRatio>
           </div>
-          <p className="mt-[24px] text-[24px] max-md:text-[14px] font-bold">
+          <p className="mt-[24px] text-[24px] font-bold max-md:text-[14px]">
             Live Auctions
           </p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
@@ -156,7 +158,9 @@ export default function MarketPlacePage() {
         </div>
 
         <div className="w-full">
-          <p className="text-[24px] max-md:text-[14px] font-bold">Collections 1/1</p>
+          <p className="text-[24px] font-bold max-md:text-[14px]">
+            Collections 1/1
+          </p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
             <div className="group relative">
               <AspectRatio ratio={16 / 16} className="">
@@ -170,7 +174,7 @@ export default function MarketPlacePage() {
               </AspectRatio>
             </div>
           </div>
-          <p className="mt-[24px] text-[24px] max-md:text-[14px] font-bold">
+          <p className="mt-[24px] text-[24px] font-bold max-md:text-[14px]">
             Photography
           </p>
           <div className="mt-[20px] rounded-md bg-[#F2F2F2] px-6 py-4 dark:bg-[#131315B2]">
@@ -188,7 +192,9 @@ export default function MarketPlacePage() {
       </div>
 
       <div className="mt-[30px] max-md:mt-[120px]">
-        <p className="text-[24px] max-md:text-[14px] font-bold">Featured Artist</p>
+        <p className="text-[24px] font-bold max-md:text-[14px]">
+          Featured Artists
+        </p>
         <div className="mt-[20px] flex justify-between gap-[56px] rounded-md bg-[#F2F2F2] p-4 dark:bg-[#0A0A0D]">
           <Swiper
             slidesPerView={isDesktop ? 6 : 2.2}
@@ -261,7 +267,7 @@ export default function MarketPlacePage() {
       </div>
 
       <div className="mt-[30px] max-md:mb-[80px] max-md:mt-[120px]">
-        <h3 className="text-[24px] max-md:text-[14px] font-bold">AI Scape</h3>
+        <h3 className="text-[24px] font-bold max-md:text-[14px]">AI Scapes</h3>
         <Swiper
           slidesPerView={isDesktop ? 4 : 2}
           spaceBetween={isDesktop ? 20 : 10}
@@ -318,8 +324,8 @@ export default function MarketPlacePage() {
   );
 }
 
-
-{/* <div className="absolute bottom-0 left-0 flex w-full flex-col justify-between gap-6 overflow-hidden bg-gradient-to-b from-transparent to-[#111010] px-5 pb-5 text-white max-md:px-[6px] max-md:pb-[6px] max-md:text-[12px]">
+{
+  /* <div className="absolute bottom-0 left-0 flex w-full flex-col justify-between gap-6 overflow-hidden bg-gradient-to-b from-transparent to-[#111010] px-5 pb-5 text-white max-md:px-[6px] max-md:pb-[6px] max-md:text-[12px]">
                 <div className="flex items-center justify-between">
                   <p>Defishard 1</p>{" "}
                   <span className="rounded-lg bg-[#131315B2] px-3 py-2">
@@ -339,4 +345,5 @@ export default function MarketPlacePage() {
                     <span>Date</span>
                     <p>4d 16h 32m 10s</p>
                   </div>
-                </div> */}
+                </div> */
+}
