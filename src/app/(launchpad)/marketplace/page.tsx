@@ -108,7 +108,7 @@ export default function MarketPlacePage() {
           </SwiperSlide>
         </Swiper>
         <div
-          className={`absolute left-0 top-1/2 z-10 flex h-0 w-full -translate-y-[32px] justify-between`}
+          className={`absolute left-0 top-1/2 z-10 flex h-0 w-full -translate-y-[32px] max-sm:-translate-y-[16px] justify-between`}
         >
           <button
             onClick={handlePrev}
