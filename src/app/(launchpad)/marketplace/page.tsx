@@ -112,13 +112,13 @@ export default function MarketPlacePage() {
         >
           <button
             onClick={handlePrev}
-            className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#8d4ce27e] to-[#e1988277] max-sm:h-9 max-sm:w-9 "
+            className="flex h-16 w-16 items-center justify-center rounded-full bg-gradient-to-r from-[#8d4ce27e] to-[#e1988277] max-sm:h-8 max-sm:w-8 "
           >
             <ChevronLeft className="w-6 max-sm:w-5" />
           </button>
           <button
             onClick={handleNext}
-            className="flex h-16 w-16  items-center justify-center rounded-full bg-gradient-to-r from-[#8d4ce27e] to-[#e1988277]  max-sm:h-9 max-sm:w-9"
+            className="flex h-16 w-16  items-center justify-center rounded-full bg-gradient-to-r from-[#8d4ce27e] to-[#e1988277]  max-sm:h-8 max-sm:w-8"
           >
             <ChevronRight className="w-6 max-sm:w-5" />
           </button>
