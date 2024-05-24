@@ -36,7 +36,17 @@ export default function HomePage() {
             height={900}
             className="h-screen w-full max-md:min-h-screen max-md:object-cover dark:hidden"
           />
-          <div className="absolute bottom-14 left-1/2 -translate-x-1/2 scale-125 animate-pulse rounded-3xl border border-black py-4 text-black shadow-lg shadow-teal-600 dark:border-white dark:text-white">
+          <div
+            onClick={() => {
+              if (typeof window !== "undefined")
+                window.scrollBy({
+                  top: window.innerHeight,
+                  left: 0,
+                  behavior: "smooth",
+                });
+            }}
+            className="absolute bottom-14 left-1/2 z-10 -translate-x-1/2 scale-125 animate-pulse cursor-pointer rounded-3xl border border-black py-4 text-black shadow-lg shadow-teal-600 dark:border-white dark:text-white"
+          >
             <ChevronsDown className="w-10" />
           </div>
           <div className="absolute top-0 mx-auto flex h-full w-full max-w-[1400px] justify-center gap-5 px-4">

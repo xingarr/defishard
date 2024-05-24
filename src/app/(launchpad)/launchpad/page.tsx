@@ -148,11 +148,11 @@ export default function LanuchpadPage() {
                 Are you ready?
               </p>
               <p className="text-[16px] font-bold max-md:text-[14px]">
-                Mint info below ⬇️
+                Mint info
               </p>
               <div className="flex justify-between max-md:text-[14px]">
                 <div>
-                  Payment Split %
+                  Assets Wrapped %
                   <p className="relative mt-4 after:absolute after:left-0 after:top-0 after:block after:h-full after:w-[40px] after:bg-yellow-50 dark:after:bg-[#131315]">
                     50%
                   </p>
@@ -172,7 +172,7 @@ export default function LanuchpadPage() {
               </div>
               <div className="flex items-center justify-between max-md:text-[14px]">
                 <span>Mint Fee</span>
-                <span className="relative font-bold after:absolute after:left-0 after:top-0 after:block after:h-full after:w-[64px] dark:after:bg-[#131315] after:bg-yellow-50 text-white">
+                <span className="relative font-bold text-white after:absolute after:left-0 after:top-0 after:block after:h-full after:w-[64px] after:bg-yellow-50 dark:after:bg-[#131315]">
                   10 NEAR
                 </span>
               </div>
