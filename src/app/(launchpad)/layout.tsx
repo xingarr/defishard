@@ -20,13 +20,11 @@ import { setupSender } from "@near-wallet-selector/sender";
 import { setupLedger } from "@near-wallet-selector/ledger";
 
 import {
-  CheckIcon,
   ChevronDown,
   ChevronRight,
   LogOut,
   MenuIcon,
   Moon,
-  Settings,
   ShoppingCartIcon,
   Sun,
 } from "lucide-react";
@@ -45,8 +43,6 @@ import {
   DropdownMenuItem,
   DropdownMenuContent,
   DropdownMenuTrigger,
-  DropdownMenuLabel,
-  DropdownMenuGroup,
 } from "@/components/ui/dropdown-menu";
 
 import { getCookie } from "@/lib/cookie";
@@ -164,6 +160,11 @@ export default function Layout({ children }: { children: React.ReactNode }) {
   useEffect(() => {
     const theme = getCookie("theme");
 
+    if (theme === undefined) {
+      setTheme("dark");
+      document.cookie = `theme=dark; path=/`;
+    }
+
     if (theme === "dark") {
       setTheme("dark");
     } else {
@@ -206,7 +207,7 @@ export default function Layout({ children }: { children: React.ReactNode }) {
     >
       <nav
         className={
-          "fixed top-0 z-50 flex w-full items-center justify-between bg-background px-[72px] py-5 shadow-md max-md:px-2 dark:bg-[#09090E]"
+          "fixed top-0 z-50 flex w-full items-center justify-between bg-background px-[72px] py-8 shadow-md max-md:px-2 max-sm:py-5 dark:bg-[#09090E]"
         }
       >
         <div className="flex items-center gap-4">
