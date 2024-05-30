@@ -68,7 +68,12 @@ export default function CollectionPage() {
     <div className="container mx-auto max-w-[1340px] pt-20 max-xl:px-4 max-sm:pt-9">
       <h3 className="flex items-center justify-between text-2xl font-bold max-sm:flex-col">
         Underground Shard Society
-        <Button onClick={() => setMintModal(true)}>+ Mint NFT</Button>
+        <Link
+          href={"/launchpad"}
+          className="effect-shadow-button inline-flex h-10 items-center justify-center whitespace-nowrap rounded-md bg-gradient-to-r from-[#8E4CE2] to-[#E19882] px-4 py-2 text-sm font-medium text-button-text ring-offset-background transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 max-md:w-full"
+        >
+          + Mint NFT
+        </Link>
       </h3>
 
       <div className="mt-10 grid grid-cols-2 gap-6 max-sm:grid-cols-1">

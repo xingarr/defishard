@@ -179,12 +179,9 @@ export default function LanuchpadPage() {
               </div>
             </div>
           </div>
-          <Link
-            href={"/launchpad/defin.test-defishard-launchpad.testnet"}
-            className="effect-shadow-button inline-flex h-10 w-1/2 items-center justify-center whitespace-nowrap rounded-md bg-gradient-to-r from-[#8E4CE2] to-[#E19882] px-4 py-2 text-lg font-medium text-button-text ring-offset-background transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 max-md:w-full"
-          >
+          <Button className="effect-shadow-button inline-flex h-10 w-1/2 items-center justify-center whitespace-nowrap rounded-md bg-gradient-to-r from-[#8E4CE2] to-[#E19882] px-4 py-2 text-lg font-medium text-button-text ring-offset-background transition-colors hover:bg-accent focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring focus-visible:ring-offset-2 disabled:pointer-events-none disabled:opacity-50 max-md:w-full">
             Mint
-          </Link>
+          </Button>
         </div>
       </div>
     </div>
