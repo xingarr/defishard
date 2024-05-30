@@ -44,13 +44,15 @@ export default function MarketPlacePage() {
           <SwiperSlide>
             <div className="rounded-md bg-[#F2F2F2] p-4  dark:bg-[#131315B2]">
               <AspectRatio ratio={16 / 13}>
-                <Image
-                  src={"/assets/market/head-1.jpeg"}
-                  alt="trending"
-                  width={500}
-                  height={500}
-                  className="h-full w-full rounded-md object-cover blur-md"
-                />
+                <Link href={"/collection"}>
+                  <Image
+                    src={"/assets/launchpad.png"}
+                    alt="trending"
+                    width={500}
+                    height={500}
+                    className="h-full w-full rounded-md object-cover"
+                  />
+                </Link>
               </AspectRatio>
             </div>
           </SwiperSlide>
@@ -108,7 +110,7 @@ export default function MarketPlacePage() {
           </SwiperSlide>
         </Swiper>
         <div
-          className={`absolute left-0 top-1/2 z-10 flex h-0 w-full -translate-y-[32px] max-sm:-translate-y-[16px] justify-between`}
+          className={`absolute left-0 top-1/2 z-10 flex h-0 w-full -translate-y-[32px] justify-between max-sm:-translate-y-[16px]`}
         >
           <button
             onClick={handlePrev}
