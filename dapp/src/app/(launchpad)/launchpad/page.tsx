@@ -100,6 +100,7 @@
 import Button from "@/components/Button";
 import { AspectRatio } from "@radix-ui/react-aspect-ratio";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
 export default function LanuchpadPage() {
@@ -178,7 +179,12 @@ export default function LanuchpadPage() {
               </div>
             </div>
           </div>
-          <Button className="w-1/2 text-lg max-md:w-full">Mint</Button>
+          <Link
+            href={"defin.test-defishard-launchpad.testnet"}
+            className="w-1/2 text-lg max-md:w-full"
+          >
+            Mint
+          </Link>
         </div>
       </div>
     </div>
