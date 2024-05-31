@@ -147,7 +147,7 @@ export default function LanuchpadPage() {
     }
   };
 
-  if (!collection.currency) {
+  if (!accountId) {
     return <LoadingComponent />;
   }
 
